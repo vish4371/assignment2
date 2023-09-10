@@ -53,7 +53,7 @@ pipeline {
 
         stage("Determine new version") {
             when {
-                branch "master"
+                branch "main"
             }
 
             steps {
