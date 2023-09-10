@@ -71,7 +71,7 @@ pipeline {
 
         stage("Create new version") {
             when {
-                branch "master"
+                branch "main"
                 environment name: "IS_NEW_VERSION", value: "YES"
             }
 
@@ -101,7 +101,7 @@ pipeline {
             agent { node { label "swarm-prod" } }
 
             when {
-                branch "master"
+                branch "main"
                 environment name: "IS_NEW_VERSION", value: "YES"
             }
 
